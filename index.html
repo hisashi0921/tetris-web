@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>テトリス</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-info">
+            <div class="score-section">
+                <h3>スコア</h3>
+                <div id="score">0</div>
+            </div>
+            <div class="level-section">
+                <h3>レベル</h3>
+                <div id="level">1</div>
+            </div>
+            <div class="lines-section">
+                <h3>ライン</h3>
+                <div id="lines">0</div>
+            </div>
+            <div class="next-section">
+                <h3>次のブロック</h3>
+                <canvas id="next-canvas" width="120" height="120"></canvas>
+            </div>
+        </div>
+        
+        <div class="game-board">
+            <canvas id="game-canvas" width="300" height="600"></canvas>
+            <div id="game-over" class="game-over hidden">
+                <h2>ゲームオーバー</h2>
+                <p>最終スコア: <span id="final-score">0</span></p>
+                <button id="restart-btn">もう一度プレイ</button>
+            </div>
+            <div id="pause-overlay" class="pause-overlay hidden">
+                <h2>ポーズ中</h2>
+                <p>Pキーでゲームを再開</p>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <h3>操作方法</h3>
+            <div class="control-item">
+                <span class="key">←→</span>
+                <span class="action">移動</span>
+            </div>
+            <div class="control-item">
+                <span class="key">↓</span>
+                <span class="action">ソフトドロップ</span>
+            </div>
+            <div class="control-item">
+                <span class="key">Z</span>
+                <span class="action">左回転</span>
+            </div>
+            <div class="control-item">
+                <span class="key">X</span>
+                <span class="action">右回転</span>
+            </div>
+            <div class="control-item">
+                <span class="key">スペース</span>
+                <span class="action">ハードドロップ</span>
+            </div>
+            <div class="control-item">
+                <span class="key">P</span>
+                <span class="action">ポーズ</span>
+            </div>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
+
